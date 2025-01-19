@@ -1,14 +1,19 @@
-#srun_xencode.py
 import math
+
+
 def force(msg):
     ret = []
     for w in msg:
         ret.append(ord(w))
     return bytes(ret)
+
+
 def ordat(msg, idx):
     if len(msg) > idx:
         return ord(msg[idx])
     return 0
+
+
 def sencode(msg, key):
     l = len(msg)
     pwd = []
@@ -19,6 +24,8 @@ def sencode(msg, key):
     if key:
         pwd.append(l)
     return pwd
+
+
 def lencode(msg, key):
     l = len(msg)
     ll = (l - 1) << 2
@@ -33,6 +40,8 @@ def lencode(msg, key):
     if key:
         return "".join(msg)[0:ll]
     return "".join(msg)
+
+
 def get_xencode(msg, key):
     if msg == "":
         return ""
@@ -69,4 +78,3 @@ def get_xencode(msg, key):
         z = pwd[n]
         q = q - 1
     return lencode(pwd, False)
-
