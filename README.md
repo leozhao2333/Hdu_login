@@ -9,7 +9,7 @@ And make some modifications to suit HDU login.
 1. ``pip install -r requirements.txt``
 2. Using ``Save_Password_to_file.py`` to save password
 3. Edit ``srun_login.py`` for your account id
-4. Enjoy it:wink:.
+4. Enjoy it :wink:
 
 ------
 
