@@ -114,7 +114,7 @@ def Check_connection():
         "https://www.aliyun.com/",
     ]
     try:
-        requests.head(random.choice(Url_list, timeout=3))
+        requests.head(random.choice(Url_list), timeout=3)
         return True
     except:
         return False
